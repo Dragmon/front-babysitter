@@ -1,0 +1,11 @@
+@import './variables.scss';
+
+.colombia {
+  position: absolute;
+  padding: 6px;
+  &--img {
+    width: 73px;
+    height: 32px;
+    border-radius: 10px 10px 10px 10px;
+  }
+}

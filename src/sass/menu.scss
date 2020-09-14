@@ -1,0 +1,70 @@
+@import './variables.scss';
+
+$nav-width: 250px;
+$nav-padding: 0.875em 1em;
+
+.navigation {
+  font-size: 1.6em;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  width: $nav-width;
+  height: 100vh;
+  background-color: $white-color;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  transition: 0.45s;
+  margin-top: 80px;
+  transform: translateX(100%);
+  &-open {
+    transform: translateX(0);
+  }
+  &__ul {
+    flex: 0 0 80%;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+  }
+  &__li {
+    &:not(:last-child) {
+      border-bottom: solid 1px $secondary-color;
+      & button{
+        width: 100%;
+        padding: 0.875em 1em;
+        color: #06a77d;
+        line-height: 1.5em;
+        font-weight: 300;
+        border: none;
+        border-style: none;
+        background-color: #fafbfc;
+        font-size: 1.6rem;
+        &:hover {
+          background-color: $hover-menu;
+        }
+      }
+    }
+    &:hover {
+      background-color: $hover-menu;
+    }
+  }
+  &__link {
+    display: block;
+    padding: $nav-padding;
+    color: $color-link;
+    line-height: 1.5em;
+    font-weight: 300;
+  }
+  &__profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &--icon {
+    font-size: 60px !important;
+  }
+}

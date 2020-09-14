@@ -1,0 +1,27 @@
+@import './variables.scss';
+
+.capital {
+  h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  &__form {
+    .id {
+      background-color: #06a77d;
+      color: #fafbfc;
+      border-radius: 20px 20px 20px 20px;
+      -moz-border-radius: 20px 20px 20px 20px;
+      font-family: Amaranth-Regular;
+      font-weight: bold;
+      padding: 3px;
+      cursor: pointer;
+    }
+    .id:focus {
+      background-color: $hover-button;
+    }
+    .id:hover {
+      background-color: $hover-button;
+    }
+  }
+}

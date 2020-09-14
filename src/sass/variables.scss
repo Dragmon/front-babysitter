@@ -1,0 +1,131 @@
+$primary-color: #0077b6;
+$secondary-color: #06a77d;
+$secondary-color-two: #aefce7;
+$secondary-color-three: #fec400;
+$background-color: #eaeff2;
+$black-color: #2c2b3c;
+$white-color: #fafbfc;
+$color-link: #06a77d;
+$hover-menu: #ade2ff;
+$hover-button: #08d09a;
+$background-tags: #aefce7;
+$message-error: #c42510;
+
+$break-m: 425px;
+$break-xs: 500px;
+$break-sm: 767px;
+$break-md: 1024px;
+
+@mixin media($media) {
+  @if $media == xs {
+    @media (max-width: $break-xs) {
+      @content;
+    }
+  } @else if $media == sm {
+    @media (max-width: $break-sm) {
+      @content;
+    }
+  } @else if $media == md {
+    @media (max-width: $break-md) {
+      @content;
+    }
+  } @else if $media == m {
+    @media (max-width: $break-m) {
+      @content;
+    }
+  }
+}
+
+@mixin media-min($media) {
+  @if $media == xs {
+    @media (min-width: $break-xs) {
+      @content;
+    }
+  } @else if $media == sm {
+    @media (min-width: $break-sm) {
+      @content;
+    }
+  } @else if $media == md {
+    @media (min-width: $break-md) {
+      @content;
+    }
+  }
+}
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin base_button {
+  background-color: $secondary-color;
+  color: $white-color;
+  border-radius: 15px;
+  border-style: none;
+  border-color: $secondary-color;
+  &:hover {
+    background-color: $hover-button;
+    cursor: pointer;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
+@mixin font($size, $font, $align) {
+  font-family: $font;
+  font-size: $size;
+  color: $black-color;
+  text-align: $align;
+}
+
+@mixin text($property) {
+  display: flex;
+  h2:nth-child(2) {
+    display: flex;
+    margin-left: $property;
+  }
+}
+
+%buttonNext {
+  color: #fafbfc;
+  background-color: #06a77d;
+  font-size: medium;
+  cursor: pointer;
+  border-radius: 20px 20px 20px 20px;
+  -moz-border-radius: 20px 20px 20px 20px;
+  -webkit-border-radius: 20px 20px 20px 20px;
+  font-family: Amaranth-Regular;
+  font-weight: bold;
+}
+
+%img {
+  width: 125px;
+  height: 125px;
+  -webkit-box-shadow: 0px 0px 29px -2px rgba(124, 119, 119, 0.68);
+  -moz-box-shadow: 0px 0px 29px -2px rgba(124, 119, 119, 0.68);
+  box-shadow: 0px 0px 29px -2px rgba(124, 119, 119, 0.68);
+  border-radius: 50% 50%;
+  -moz-border-radius: 50% 50%;
+  -webkit-border-radius: 50% 50%;
+}
+
+%button {
+  color: $white-color;
+  background-color: $secondary-color;
+  margin-top: 6%;
+  margin-left: 56px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 20px 20px 20px 20px;
+  -moz-border-radius: 20px 20px 20px 20px;
+  -webkit-border-radius: 20px 20px 20px 20px;
+  font-family: Amaranth-Regular;
+  font-weight: bold;
+}
+
+.Toastify{
+  &__toast{
+    font-size:2rem;
+    border-radius: 15px;
+  }
+}

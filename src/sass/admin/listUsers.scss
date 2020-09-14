@@ -1,0 +1,12 @@
+@import '../variables.scss';
+
+.sectionList{
+  width: 80%;
+  margin: 0 auto 30px;
+  @include media-min(xs) {
+    width: 60%;
+  }
+  @include media-min(md) {
+    width: 50%;
+  }
+}

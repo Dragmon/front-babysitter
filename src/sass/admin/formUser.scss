@@ -1,0 +1,51 @@
+@import '../variables.scss';
+
+.titleForm {
+  text-align: center;
+  margin: 25px 0;
+}
+.formUser {
+  height: auto;
+  padding: 1em 2em;
+  border: 1px solid;
+  border-radius: 15px;
+  font-size: 2em;
+  @include media-min(md) {
+    padding: 3em 5em;
+  }
+  &__div{
+    display: flex;
+    flex-direction: column;
+    & label{
+      padding: .3em 0;
+    }
+    & input, select{
+      font-size: inherit;
+      border-radius: 15px;
+      padding: 5px 20px;
+      &:focus{
+        outline: none;
+      }
+    }
+    & select{
+      border: 2px solid;
+    }
+    &:nth-child(6){
+      input {
+        padding: 5px 0;
+        border-radius: 0;
+      }
+    }
+  }
+  &__error{
+    font-size: 1.5rem;
+    color: $message-error;
+  }
+}
+.inputFormButton{
+  @include base_button;
+  padding: 10px 0;
+  margin: 20px 0 0;
+  width: 100%;
+  font-size: 2rem;
+}

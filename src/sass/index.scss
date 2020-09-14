@@ -1,0 +1,77 @@
+@import './variables.scss';
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@font-face {
+  font-family: Amaranth-Regular;
+  src: url("https://fonts.googleapis.com/css2?family=Amaranth&display=swap");
+}
+@font-face {
+  font-family: Amaranth-Bold;
+  src: url("https://fonts.googleapis.com/css2?family=Amaranth:wght@700&display=swap");
+}
+@font-face {
+  font-family: Roboto-Regular;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+}
+@font-face {
+  font-family: Roboto-Medium;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+}
+@font-face {
+  font-family: Roboto-Bold;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Roboto-Regular', sans-serif;
+  background-color: $background-color;
+  margin: 0px;
+  box-sizing: border-box;
+
+}
+h1 {
+  font-family: 'Amaranth-Bold', sans-serif;
+  font-size: 6rem;
+  @include media(xs) {
+    font-size: 4rem;
+  }
+}
+h2 {
+  font-size: 4rem;
+  @include media(xs) {
+    font-size: 3rem;
+  }
+}
+h3,
+h4,
+h5,
+h6 {
+  font-size: 3rem;
+  @include media(xs) {
+    font-size: 2.5rem;
+  }
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Amaranth-Regular', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 2rem;
+}
+p,
+a {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
